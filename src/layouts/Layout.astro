@@ -4,6 +4,9 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
+import NavBar from '../components/NavBar.astro';
+import TopContactBar from "../components/TopContactBar.astro";
 ---
 
 <!DOCTYPE html>
@@ -16,7 +19,10 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
+
 	<body>
+		<TopContactBar />
+		<NavBar />
 		<slot />
 	</body>
 </html>

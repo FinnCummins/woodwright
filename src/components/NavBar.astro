@@ -1,0 +1,45 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<!-- Header -->
+<header class="flex justify-between items-center md:justify-between px-4 py-2">
+    <a href="/" class="mx-auto md:mx-0">
+        <img src="/logo-color.png" alt="Logo" class="w-16 h-16 md:w-32 md:h-32">
+    </a>
+
+    <nav class="hidden md:flex space-x-4">
+        <div class="dropdown">
+            <button class="dropbtn rounded-none">Services</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">About</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Contact</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
