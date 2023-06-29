@@ -19,10 +19,12 @@ function showSlide(n) {
     slides[i].style.display = "none"; 
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active-dot", "");
+    dots[i].classList.remove("bg-blue-500");
+    dots[i].classList.add("bg-gray-300");
   }
   slides[slideIndex].style.display = "block"; 
-  dots[slideIndex].className += " active-dot";
+  dots[slideIndex].classList.remove("bg-gray-300");
+  dots[slideIndex].classList.add("bg-blue-500");
 }
 
 // Call showSlide to display the first image when the page loads
