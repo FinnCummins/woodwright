@@ -1,0 +1,31 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<div class="image-gallery flex flex-col items-center justify-center">
+  <div class="image-slider">
+    <img class="slider-image hidden" src="/logo-color.png" alt="Image 1">
+    <img class="slider-image hidden" src="/logo-color.png" alt="Image 2">
+    <img class="slider-image hidden" src="/logo-color.png" alt="Image 3">
+    <img class="slider-image hidden" src="/logo-color.png" alt="Image 4">
+  </div>
+  <div class="image-navigation flex items-center justify-center my-4">
+    <button class="arrow prev px-4 py-2 bg-blue-500 text-white" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="arrow next px-4 py-2 bg-blue-500 text-white" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  <div class="image-dots flex items-center justify-center space-x-2">
+    <span class="dot h-4 w-4 rounded-full bg-gray-300 cursor-pointer" onclick="currentSlide(1)"></span>
+    <span class="dot h-4 w-4 rounded-full bg-gray-300 cursor-pointer" onclick="currentSlide(2)"></span>
+    <span class="dot h-4 w-4 rounded-full bg-gray-300 cursor-pointer" onclick="currentSlide(3)"></span>
+    <span class="dot h-4 w-4 rounded-full bg-gray-300 cursor-pointer" onclick="currentSlide(4)"></span>
+  </div>
+</div>
+
+
+
