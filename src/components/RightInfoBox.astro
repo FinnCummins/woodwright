@@ -6,25 +6,12 @@ export interface Props {
 }
 
 const { href, title, body } = Astro.props;
+import InfoCard from './InfoCard.astro';
 ---
 
-<!-- Header -->
-<header class="flex justify-between items-center md:justify-between px-4 py-2">
-    <a href="/" class="mx-auto md:mx-0">
-        <img src="/logo-color.png" alt="Logo" class="w-48 h-48 md:w-32 md:h-32">
-    </a>
-
-    <nav class="hidden md:flex space-x-32">
-        <div class="dropdown rounded-full bg-green-100 p-4 hover:bg-gradient-to-r from-green-300 to-green-400">
-            <a class="dropbtn" href="/service">Services</a>
-        </div>
-        <div class="dropdown rounded-full bg-green-100 p-4 hover:bg-gradient-to-r from-green-300 to-green-400">
-            <a class="dropbtn" href="/about">About</a>
-        </div>
-        <div class="dropdown rounded-full bg-green-100 p-4 hover:bg-gradient-to-r from-green-300 to-green-400">
-            <button class="dropbtn" href="#contact">Contact</button>
-        </div>
-    </nav>
-</header>
+<div id="right-info-box" class="flex justify-end items-center md: px-4 py-2">
+    <img src="/stockCarpentryImage5.jpg" alt="StockCarpentryImage" class="h-64 w-100">
+    <InfoCard href="/service" title="Services" body="Woodwright window and sash restoration offers a number of high quality services including sash restoration..."/>
+</div>
 
 

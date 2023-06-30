@@ -8,14 +8,32 @@ export interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<div class="link-card">
-	<a href={href}>
-		<h2>
+<div id="info-card" class="info-card mx-auto bg-yellow-300 p-6 rounded-lg shadow-lg hover:bg-yellow-700 opacity-0 transition-all duration-1000 ease-in-out transform translate-y-10">
+	<a href={href} class="no-underline text-black hover:text-white transition-colors duration-500">
+		<h2 class="text-2xl font-semibold mb-4">
 			{title}
 		</h2>
-		<p>
+		<p class="text-base font-light">
 			{body}
 		</p>
 	</a>
+    <script>
+        window.addEventListener('scroll', function () {
+            const infoCards = document.getElementsByClassName('info-card');
+            
+            for (let i = 0; i < infoCards.length; i++) {
+                const top = infoCards[i].getBoundingClientRect().top;
+                
+                if (top <= window.innerHeight) {
+                    infoCards[i].classList.remove('opacity-0', 'translate-y-10');
+                    infoCards[i].classList.add('opacity-100', 'translate-y-0');
+                }
+            }
+        });
+    </script>
+
 </div>
+
+
+
 
