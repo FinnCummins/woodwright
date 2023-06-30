@@ -1,0 +1,16 @@
+---
+export interface Props {
+	title: string;
+	body: string;
+	href: string;
+}
+
+const { href, title, body } = Astro.props;
+import InfoCard from './InfoCard.astro';
+---
+
+<div id="left-info-box" class="flex justify-between items-center md: px-4 py-2">
+    <InfoCard href="/about" title="About" />
+</div>
+
+
