@@ -1,10 +1,13 @@
 let slideIndex = 1;
+let autoSlideInterval;
 
 window.moveSlide = function(n) {
+  clearInterval(autoSlideInterval);
   showSlide(slideIndex += n);
 }
 
 window.currentSlide = function(n) {
+  clearInterval(autoSlideInterval);
   showSlide(slideIndex = n);
 }
 
@@ -30,4 +33,8 @@ function showSlide(n) {
 // Call showSlide to display the first image when the page loads
 document.addEventListener("DOMContentLoaded", function() {
   showSlide(slideIndex);
+
+  autoSlideInterval = setInterval(() => {
+    showSlide(slideIndex += 1);
+  }, 5000);
 });

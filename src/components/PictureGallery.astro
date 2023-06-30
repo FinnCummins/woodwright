@@ -9,11 +9,11 @@ const { href, title, body } = Astro.props;
 ---
 
 <div class="image-gallery flex flex-col items-center justify-center mb-10">
-  <div class="image-slider">
-    <img class="slider-image h-50" src="/stockCarpentryImage1.jpg" alt="Image 1">
-    <img class="slider-image" src="/stockCarpentryImage2.jpg" alt="Image 2">
-    <img class="slider-image" src="/stockCarpentryImage3.jpg" alt="Image 3">
-    <img class="slider-image" src="/stockCarpentryImage4.jpg" alt="Image 4">
+  <div class="image-slider h-96 overflow-hidden">
+    <img class="slider-image w-full h-auto object-cover" src="/stockCarpentryImage1.jpg" alt="Image 1">
+    <img class="slider-image w-full h-auto object-cover" src="/stockCarpentryImage2.jpg" alt="Image 2">
+    <img class="slider-image w-full h-auto object-cover" src="/stockCarpentryImage3.jpg" alt="Image 3">
+    <img class="slider-image w-full h-auto object-cover" src="/stockCarpentryImage4.jpg" alt="Image 4">
   </div>
   <div class="image-navigation flex items-center justify-center my-4">
     <button class="arrow prev px-4 py-2 bg-blue-500 text-white" onclick="moveSlide(-1)">&#10094;</button>
@@ -27,6 +27,3 @@ const { href, title, body } = Astro.props;
   </div>
   <script type="module" src="/src/scripts/slider.js"></script>
 </div>
-
-
-
