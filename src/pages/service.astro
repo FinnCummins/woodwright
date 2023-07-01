@@ -1,12 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import LeftInfoBox from "../components/LeftInfoBox.astro";
+import RightInfoBox from "../components/RightInfoBox.astro";
 ---
 
 <Layout title="Woodwright">
 	<main>
 		<h1 class="">Welcome to the SERVICES page for Woodwright window and sash restoration</h1>
-		
+		<LeftInfoBox href="/about" title="About" body="Ger is an experienced carpenter with over 25 years experience in the construction industry"/>
+		<RightInfoBox href="/service" title="Services" body="Woodwright window and sash restoration offers a number of high quality services including sash restoration..."/>
 		
 	</main>
 </Layout>
