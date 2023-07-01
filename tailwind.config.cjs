@@ -8,6 +8,7 @@ module.exports = {
         		'body-color': '#333333',
         		'cta-color': '#006400',
 				'woodwright-green': '#398378',
+				'woodwright-green-light': '#5accbb'
 			},
 			fontFamily: {
 				'serif': ['Merriweather', 'serif'],
