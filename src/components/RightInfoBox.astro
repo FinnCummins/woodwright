@@ -3,14 +3,15 @@ export interface Props {
 	title: string;
 	body: string;
 	href: string;
+	src: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, src } = Astro.props;
 import InfoCard from './InfoCard.astro';
 ---
 
 <div id="right-info-box" class="flex flex-col md:flex-row justify-center items-center my-8 md:my-8 md:px-4 py-2 px-8">
-    <img src="/stockCarpentryImage5.jpg" alt="StockCarpentryImage" class="h-64 w-100 mr-8 rounded-lg shadow-md mb-8 md:mb-0">
+    <img src={src} alt="StockCarpentryImage" class="h-64 w-100 mr-8 rounded-lg shadow-md mb-8 md:mb-0">
     <InfoCard href={href} title={title} body={body} class="ml-8 md:ml-8"/>
 </div>
 

@@ -36,5 +36,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
   autoSlideInterval = setInterval(() => {
     showSlide(slideIndex += 1);
-  }, 4000);
+  }, 3500);
 });
