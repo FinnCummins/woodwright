@@ -7,6 +7,7 @@ module.exports = {
 				'title-color': '#654321',
         		'body-color': '#333333',
         		'cta-color': '#006400',
+				'woodwright-green': '#398378',
 			},
 			fontFamily: {
 				'serif': ['Merriweather', 'serif'],

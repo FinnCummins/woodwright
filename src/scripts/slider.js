@@ -1,4 +1,4 @@
-let slideIndex = 1;
+let slideIndex = 0;
 let autoSlideInterval;
 
 window.moveSlide = function(n) {
@@ -36,5 +36,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
   autoSlideInterval = setInterval(() => {
     showSlide(slideIndex += 1);
-  }, 5000);
+  }, 4000);
 });

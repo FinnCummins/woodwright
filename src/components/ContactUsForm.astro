@@ -1,0 +1,37 @@
+---
+const styles = {
+  container: 'flex justify-center items-center h-screen bg-gray-100',
+  form: 'bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-3/4',
+  heading: 'text-2xl text-gray-700 text-center mb-4',
+  field: 'mb-4',
+  label: 'block text-gray-700 text-sm font-bold mb-2',
+  input: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline',
+  textarea: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-20',
+  button: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline',
+};
+
+---
+<div class={styles.container}>
+  <form class={styles.form}>
+    <h2 class={styles.heading}>Contact us for a quote!</h2>
+    <div class={styles.field}>
+      <label class={styles.label} for="name">Name</label>
+      <input class={styles.input} type="text" id="name" placeholder="Your Name" required />
+    </div>
+    <div class={styles.field}>
+      <label class={styles.label} for="phone">Phone</label>
+      <input class={styles.input} type="tel" id="phone" placeholder="Your Phone Number" required />
+    </div>
+    <div class={styles.field}>
+      <label class={styles.label} for="email">Email</label>
+      <input class={styles.input} type="email" id="email" placeholder="Your Email" />
+    </div>
+    <div class={styles.field}>
+      <label class={styles.label} for="message">Message</label>
+      <textarea class={styles.textarea} id="message" placeholder="Your Message" required></textarea>
+    </div>
+    <div class={styles.field}>
+      <button class={styles.button} type="submit">Submit</button>
+    </div>
+  </form>
+</div>
